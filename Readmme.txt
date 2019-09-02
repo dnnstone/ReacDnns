@@ -1,2 +1,4 @@
 
 primeros pasos para reac en git
+ahora agregamos la version 2 para chequear y agregar la clave ssh
+t
