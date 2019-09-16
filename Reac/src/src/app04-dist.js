@@ -22,10 +22,32 @@ var Counter = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
 
-        _this.state = {
-            count: 0
+        _this.upCount = function (e) {
+            e.preventDefault();
+            _this.setState(function (prevState) {
+                return {
+                    count: prevState.count + 1
+                };
+            });
         };
 
+        _this.downCount = function (e) {
+            e.preventDefault();
+            _this.setState(function (prevState) {
+                return {
+                    count: prevState.count - 1
+                };
+            });
+        };
+
+        _this.resetCount = function (e) {
+            e.preventDefault();
+            _this.setState({ count: 0 });
+        };
+
+        _this.state = {
+            count: 45
+        };
         return _this;
     }
 
@@ -40,6 +62,25 @@ var Counter = function (_React$Component) {
                     { className: "count" },
                     " ",
                     this.state.count
+                ),
+                React.createElement(
+                    "div",
+                    { className: "changeCount" },
+                    React.createElement(
+                        "a",
+                        { href: "#", className: "upCount", onClick: this.upCount },
+                        "Contar"
+                    ),
+                    React.createElement(
+                        "a",
+                        { href: "#", className: "downCount", onClick: this.downCount },
+                        "Descontar"
+                    ),
+                    React.createElement(
+                        "a",
+                        { href: "#", className: "resetCount", onClick: this.resetCount },
+                        "Inicializar"
+                    )
                 )
             );
         }
