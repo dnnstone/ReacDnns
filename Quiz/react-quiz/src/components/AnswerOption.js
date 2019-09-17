@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function AnswerOption(props) {
-    console.log('dnns: ');
   return (
     <li className="answerOption">
       <input

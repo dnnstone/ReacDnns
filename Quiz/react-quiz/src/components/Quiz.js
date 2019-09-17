@@ -7,6 +7,7 @@ import AnswerOption from '../components/AnswerOption';
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
+      console.log(props.answer)
     return (
       <AnswerOption
         key={key.content}

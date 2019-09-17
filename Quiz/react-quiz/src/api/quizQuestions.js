@@ -10,19 +10,19 @@ var quizQuestions = [
       question: "What franchise would you rather play a game from?",
       answers: [
           {
-              type: "Microsoft",
+              type: "no",
               content: "Halo"
           },
           {
-              type: "Nintendo",
+              type:"no",
               content: "Pokemon"
           },
           {
-              type: "Sony",
+              type: "no",
               content: "Uncharted"
           },
           {
-              type: "Dnnstone",
+              type: "si",
               content: "Bogota"
           }
       ]
@@ -31,16 +31,20 @@ var quizQuestions = [
       question: "Which console would you prefer to play with friends?",
       answers: [
           {
-              type: "Microsoft",
+              type: "no",
               content: "X-Box"
           },
           {
-              type: "Nintendo",
+              type: "no",
               content: "Nintendo 64"
           },
           {
-              type: "Sony",
+              type: "no",
               content: "Playstation 1"
+          },
+          {
+              type: "si",
+              content: "Arequipa"
           }
       ]
   },
@@ -48,19 +52,19 @@ var quizQuestions = [
       question: "Which of these racing franchises would you prefer to play a game from?",
       answers: [
           {
-              type: "Microsoft",
+              type: "no",
               content: "Forza"
           },
           {
-              type: "Nintendo",
+              type: "no",
               content: "Mario Kart"
           },
           {
-              type: "Sony",
+              type: "no",
               content: "Gran Turismo"
           },
           {
-              type: "Dnnstone",
+              type: "si",
               content: "Lima"
           }
       ]
@@ -69,19 +73,19 @@ var quizQuestions = [
       question: "Which of these games do you think is best?",
       answers: [
           {
-              type: "Microsoft",
+              type: "no",
               content: "BioShock"
           },
           {
-              type: "Nintendo",
+              type: "no",
               content: "The Legend of Zelda: Ocarina of Time"
           },
           {
-              type: "Sony",
+              type:"no",
               content: "Final Fantasy VII"
           },
          {
-              type: "Dnnstone",
+              type: "si",
               content: "Dubai"
           }
       ]
@@ -90,20 +94,41 @@ var quizQuestions = [
       question: "What console would you prefer to own?",
       answers: [
           {
-              type: "Microsoft",
+              type: "no",
               content: "X-Box One"
           },
           {
-              type: "Nintendo",
+              type: "no",
               content: "Wii U"
           },
           {
-              type: "Sony",
+              type: "no",
               content: "Playstation 4"
           },
           {
-              type: "Dnnstone",
+              type: "si",
               content: "AndesMagicos"
+          }
+      ]
+  },
+  {
+      question: "Maleus martificarun es el castillo de las brujas reales",
+      answers: [
+          {
+              type: "no",
+              content: "No tiene nada que ver una cosa con la otra"
+          },
+          {
+              type: "no",
+              content: "Se dara siempre y cuando se quecuee la version en portuguez"
+          },
+          {
+              type: "no",
+              content: "Buscamos controlar el poder punitivo para conseguir algo por detras"
+          },
+          {
+              type: "si",
+              content: "Asi es, no solo es el castillo de brujas sino todos los otros locales de torturas"
           }
       ]
   }

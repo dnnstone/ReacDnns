@@ -18,7 +18,7 @@ class App extends Component {
       answersCount: {},
       result: ''
     };
-
+// esta wada no entiendo q chucha se declara aca, o es que las funciones que se declaran en otro 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
     componentWillMount() {
@@ -28,13 +28,7 @@ class App extends Component {
       answerOptions: shuffledAnswerOptions[0]
     });
   }
-  componentDidMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question => this.shuffleArray(question.answers));
-    this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
-    });
-  }
+
 
   shuffleArray(array) {
     var currentIndex = array.length,
@@ -55,18 +49,24 @@ class App extends Component {
 
     return array;
   }
+// Esta funcion se envia como parametro a Quiz,js en la variable onAnswerSelected
+// luego desde Quiz, mandamos como parametro a AnswerOptions con nombre de variable onAnswerSelected
+// en AnswerOptions, onAnswerSelected recibe la funcion handleAnswerSelected de App.js, la cual administra
+// el proceder en el momento que se elige una opccion.
 
+// me parece q como parametro (event) tiene el valor del imput que se clickeo
   handleAnswerSelected(event) {
+      console.log("event enviado: "+event.currentTarget.value);
     this.setUserAnswer(event.currentTarget.value);
 
     if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
+      setTimeout(() => this.setNextQuestion(), 3000);
     } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
+      setTimeout(() => this.setResults(this.getResults()), 3000);
     }
   }
 
-  setUserAnswer(answer) {
+  setUserAnswer(answer) {   
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
@@ -74,6 +74,7 @@ class App extends Component {
       },
       answer: answer
     }));
+     console.log(this.state);
   }
 
   setNextQuestion() {
