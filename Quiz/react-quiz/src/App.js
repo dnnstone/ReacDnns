@@ -56,13 +56,15 @@ class App extends Component {
 
 // me parece q como parametro (event) tiene el valor del imput que se clickeo
   handleAnswerSelected(event) {
-      console.log("event enviado: "+event.currentTarget.value);
+//      console.log("event enviado: ");
+//      console.log(event);
+//      debugger;
     this.setUserAnswer(event.currentTarget.value);
 
     if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 3000);
+      setTimeout(() => this.setNextQuestion(), 1000);
     } else {
-      setTimeout(() => this.setResults(this.getResults()), 3000);
+      setTimeout(() => this.setResults(this.getResults()), 1000);
     }
   }
 
@@ -74,6 +76,7 @@ class App extends Component {
       },
       answer: answer
     }));
+    console.log('this state 79 app.js')
      console.log(this.state);
   }
 
@@ -91,7 +94,9 @@ class App extends Component {
   }
 
   getResults() {
+      
     const answersCount = this.state.answersCount;
+    console.log("answersCount: ");
     console.log(answersCount);
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map(key => answersCount[key]);

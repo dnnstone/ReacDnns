@@ -10,19 +10,20 @@ var quizQuestions = [
       question: "What franchise would you rather play a game from?",
       answers: [
           {
-              type: "no",
+              id:1,
+              correct:false,
               content: "Halo"
           },
-          {
-              type:"no",
+          { id:2,
+              correct:false,
               content: "Pokemon"
           },
-          {
-              type: "no",
+          {id:3,
+              correct:false,
               content: "Uncharted"
           },
-          {
-              type: "si",
+          {id:4,
+              correct:true,
               content: "Bogota"
           }
       ]
@@ -30,20 +31,20 @@ var quizQuestions = [
   {
       question: "Which console would you prefer to play with friends?",
       answers: [
-          {
-              type: "no",
+          { id:1,
+              correct:false,
               content: "X-Box"
           },
-          {
-              type: "no",
+          { id:2,
+              correct:false,
               content: "Nintendo 64"
           },
-          {
-              type: "no",
+          {id:3,
+              correct:false,
               content: "Playstation 1"
           },
-          {
-              type: "si",
+          {id:4,
+              correct:true,
               content: "Arequipa"
           }
       ]
@@ -51,20 +52,20 @@ var quizQuestions = [
   {
       question: "Which of these racing franchises would you prefer to play a game from?",
       answers: [
-          {
-              type: "no",
+          {id:1,
+              correct:false,
               content: "Forza"
           },
-          {
-              type: "no",
+          { id:2,
+              correct:false,
               content: "Mario Kart"
           },
-          {
-              type: "no",
+          {id:3,
+              correct:false,
               content: "Gran Turismo"
           },
-          {
-              type: "si",
+          {id:4,
+              correct:true,
               content: "Lima"
           }
       ]
@@ -72,20 +73,20 @@ var quizQuestions = [
   {
       question: "Which of these games do you think is best?",
       answers: [
-          {
-              type: "no",
+          {id:1,
+              correct:false,
               content: "BioShock"
           },
-          {
-              type: "no",
+          { id:2,
+              correct:false,
               content: "The Legend of Zelda: Ocarina of Time"
           },
-          {
-              type:"no",
+          {id:3,
+              correct:false,
               content: "Final Fantasy VII"
           },
-         {
-              type: "si",
+         {id:4,
+              correct:true,
               content: "Dubai"
           }
       ]
@@ -93,20 +94,20 @@ var quizQuestions = [
   {
       question: "What console would you prefer to own?",
       answers: [
-          {
-              type: "no",
+          {id:1,
+              correct:false,
               content: "X-Box One"
           },
-          {
-              type: "no",
+          { id:2,
+              correct:false,
               content: "Wii U"
           },
-          {
-              type: "no",
+          {id:3,
+              correct:false,
               content: "Playstation 4"
           },
-          {
-              type: "si",
+          {id:4,
+              correct:true,
               content: "AndesMagicos"
           }
       ]
@@ -114,20 +115,20 @@ var quizQuestions = [
   {
       question: "Maleus martificarun es el castillo de las brujas reales",
       answers: [
-          {
-              type: "no",
+          {id:1,
+              correct:false,
               content: "No tiene nada que ver una cosa con la otra"
           },
-          {
-              type: "no",
+          { id:2,
+              correct:false,
               content: "Se dara siempre y cuando se quecuee la version en portuguez"
           },
-          {
-              type: "no",
+          {id:3,
+              correct:false,
               content: "Buscamos controlar el poder punitivo para conseguir algo por detras"
           },
-          {
-              type: "si",
+          {id:4,
+              correct:true,
               content: "Asi es, no solo es el castillo de brujas sino todos los otros locales de torturas"
           }
       ]

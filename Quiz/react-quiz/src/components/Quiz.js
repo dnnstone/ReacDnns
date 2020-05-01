@@ -7,12 +7,15 @@ import AnswerOption from '../components/AnswerOption';
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
-      console.log(props.answer)
+      console.log("key: quiz 10 ");
+      console.log(key);
+      
     return (
       <AnswerOption
         key={key.content}
         answerContent={key.content}
-        answerType={key.type}
+        answerType={key.correct}
+        answerId={key.id}
         answer={props.answer}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
@@ -30,12 +33,13 @@ function Quiz(props) {
       transitionAppear
       transitionAppearTimeout={500}
     >
-      <div key={props.questionId}>
+      <div  key={props.questionId} >
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
         <Question content={props.question} />
         <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
         </ul>
+         <div> <h1>Correcto</h1></div>
       </div>
     </CSSTransitionGroup>
   );
